@@ -49,4 +49,16 @@ export class AppComponent implements OnInit {
     this.selectedNodeId = this.selectedNode.parentId;
     console.log(this.selectedNodeId);
   }
+  public add(node: Tree): void {
+    this.selectedNode = node;
+    this.selectedNodeId = this.selectedNode.parentId;
+  }
+  public edit(node: Tree): void {
+    this.selectedNode = node;
+    this.selectedNodeId = this.selectedNode.parentId;
+  }
+  public delete() {
+    this.selectedNode = node;
+    this.selectedNodeId = this.selectedNode.parentId;
+  }
 }

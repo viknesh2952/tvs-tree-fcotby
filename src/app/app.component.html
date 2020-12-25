@@ -1,6 +1,7 @@
-<button mat-raised-button color="primary" >Add Detail</button>
-<button mat-raised-button color="primary" >Edit Detail</button>
-<button mat-raised-button color="primary">Delete Detail</button>
+<button mat-raised-button color="primary" (click)="add(node.data)">Add Detail</button>
+<button mat-raised-button color="primary"
+(click)="edit(node.data)">Edit Detail</button>
+<button mat-raised-button color="primary" (click)="delete(node.data)">Delete Detail</button>
 <div class="tree">
 
 	<div class="tree__tree-section">
