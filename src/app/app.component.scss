@@ -1,0 +1,17 @@
+// .tree {
+//   display: flex;
+
+//   &__children-section {
+//     margin-left: 500px;
+//     &__children {
+//       &::after {
+//         content: ",";
+//       }
+//       &--last {
+//         &::after {
+//           content: none;
+//         }
+//       }
+//     }
+//   }
+// }

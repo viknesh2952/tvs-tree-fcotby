@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~angular-tree-component/dist/angular-tree-component.css";
+div.tree div.tree-children::before,
+div.tree::before {
+  content: "";
+  position: absolute;
+  border-left: 1.5px dotted #23527c;
+  height: 100%;
+  // top: 10px;
+  left: 12px;
+}
+.node-content-wrapper-active,
+.node-content-wrapper-focused,
+.node-content-wrapper:hover {
+  box-shadow: 2 2 3px rgb(0, 0, 0);
+  background-color: rgb(230, 77, 77);
+}
+.node-content-wrapper-active,
+.node-content-wrapper.node-content-wrapper-active:hover,
+.node-content-wrapper-active.node-content-wrapper-focused {
+  background-color: black;
+}
+.node-content-wrapper {
+  background-color: rgb(24, 63, 233);
+  border: 1px solid blue;
+  color: rgba(255, 255, 255, 0.938);
+  border-radius: 2px;
+  padding: 3px;
+}
+div.tree {
+  padding-left: 0;
+  margin-left: 0px;
+}
+
+div.tree div.tree-children {
+  position: relative;
+  padding-left: 10;
+  margin-left: 30px;
+}
+
+div.tree div.tree-children::before {
+  left: 5px;
+}
+
+div.tree tree-node > div > .node-wrapper {
+  margin-left: 24px;
+}
+
+div.tree tree-node > div > .node-wrapper > .node-content-wrapper {
+  margin-left: 4px;
+}
+
+div.tree tree-node > div.tree-node-leaf > .node-wrapper {
+  margin-left: 0;
+}
+
+div.tree tree-node > div::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px dotted #23527c;
+  width: 10px;
+  margin-top: 12px;
+  left: 5px;
+}
+
+div.tree tree-node > div .toggle-children-wrapper {
+  width: 8px;
+  height: 5px;
+  border: 1px solid #23527c;
+  border-radius: 3px;
+  background-color: rgb(248, 110, 207);
+  position: absolute;
+  left: 10px;
+  margin-top: 3px;
+  margin-left: 0;
+  display: inline-block;
+  z-index: 1;
+}
+
+div.tree tree-node > div .toggle-children-wrapper::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  border-top: 2px solid white;
+  position: absolute;
+  top: 5px;
+  left: 2px;
+}
+
+div.tree
+  tree-node
+  > div
+  .toggle-children-wrapper.toggle-children-wrapper-collapsed::after {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  // border-left: 1px solid hsl(208, 56%, 31%);
+  border-left: 2px solid white;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+
+div.tree tree-node > div .toggle-children-wrapper .toggle-children {
+  display: none;
+}
+
+div.tree tree-node > div .node-content-wrapper {
+  margin-left: 20px;
+}
+
+div.tree > tree-node > div::before {
+  left: 4px;
+}
+
+div.tree
+  > tree-node
+  > div
+  > .node-wrapper
+  > tree-node-expander
+  > .toggle-children-wrapper {
+  left: 22px;
+}

@@ -1,0 +1,26 @@
+<button mat-raised-button color="primary" >Add Detail</button>
+<button mat-raised-button color="primary" >Edit Detail</button>
+<button mat-raised-button color="primary">Delete Detail</button>
+<div class="tree">
+
+	<div class="tree__tree-section">
+		<tree-root #tree [focused]="true" [nodes]="treeNodes" [options]="options">
+			<ng-template #treeNodeTemplate let-node let-index="index">
+				<div (click)="onNodeSelected(node.data)">
+					<span>{{ node.data.name }}</span>
+				</div>
+			</ng-template>
+		</tree-root>
+	</div>
+	<div *ngIf="selectedNode" class="tree__children-section">
+		<div> <b>Selected Node:</b> <br>
+			<div>name: {{selectedNode.name}}</div><br><b>children:</b> <span *ngFor="let children of selectedNode.children; let childrenIndex = index; last as last"
+        [ngClass]="{'tree__children-section__children--last': last}" class="tree__children-section__children">
+        {{childrenIndex+1}}. {{children.name}}</span><br>
+			<!-- <span *ngIf="!children" >No children</span></div>  -->
+			<!-- <div>id: {{selectedNode.id}}</div> -->
+
+			<!-- <div>parentId: {{selectedNode.parentId}} <span *ngIf="!selectedNode.parentId" >No parent</span></div> -->
+		</div>
+
+	</div>
